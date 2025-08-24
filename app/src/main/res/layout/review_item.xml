@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/constraint"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_margin="8dp"
+    tools:background="@android:color/holo_green_light">
+
+    <TextView
+        android:id="@+id/textViewAuthor"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Author"
+        android:textSize="18sp"
+        android:textColor="@color/white"
+        android:layout_margin="16dp">
+    </TextView>
+
+    <TextView
+        android:id="@+id/textViewReview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:text="Review"
+        android:textSize="16sp"
+        app:layout_constraintTop_toBottomOf="@+id/textViewAuthor"
+        android:layout_marginTop="16dp"
+        android:layout_marginHorizontal="16dp"
+        android:textColor="@color/white">
+    </TextView>
+
+    <TextView
+        android:id="@+id/textViewDate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:text="15.08.2025"
+        app:layout_constraintTop_toBottomOf="@+id/textViewReview"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginVertical="20dp"
+        android:paddingVertical="16dp"
+        android:textColor="@color/white">
+    </TextView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DetailMovieActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/imageViewMovie"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:minHeight="300dp"
+            tools:src="@tools:sample/avatars"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+        </ImageView>
+
+        <TextView
+            android:id="@+id/textViewTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:text="Title"
+            android:layout_margin="8dp"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintTop_toBottomOf="@+id/imageViewMovie"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+        </TextView>
+
+        <TextView
+            android:id="@+id/textViewYear"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:text="2018"
+            android:layout_margin="8dp"
+            android:textColor="@android:color/holo_orange_light"
+            android:textSize="16sp"
+            app:layout_constraintTop_toBottomOf="@+id/textViewTitle"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+        </TextView>
+
+        <TextView
+            android:id="@+id/textViewDescription"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:text="Description"
+            android:layout_margin="8dp"
+            android:textSize="16sp"
+            android:textColor="@color/black"
+            app:layout_constraintTop_toBottomOf="@+id/textViewYear"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+        </TextView>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerViewTrailers"
+            android:layout_margin="8dp"
+            android:nestedScrollingEnabled="false"
+            app:layout_constraintTop_toBottomOf="@+id/textViewDescription"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager">
+
+        </androidx.recyclerview.widget.RecyclerView>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerViewReviews"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/recyclerViewTrailers"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            >
+        </androidx.recyclerview.widget.RecyclerView>
+
+        <ImageView
+            android:id="@+id/imageViewStar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/imageViewMovie"
+            app:layout_constraintBottom_toBottomOf="@+id/imageViewMovie"
+            tools:src="@android:drawable/star_big_off"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_margin="16dp">
+        </ImageView>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.core.widget.NestedScrollView>
